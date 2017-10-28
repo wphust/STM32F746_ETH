@@ -1,0 +1,94 @@
+TODO:
+Learn reading schematics
+
+Embedded ST-LINK/V2-1 for powering, programming and debugging.
+ST-LINK USB VBUS or external sources
+
+IDE
+• Keil® MDK-ARM(a)
+• IAR™ EWARM(a)
+• GCC-based IDEs including free SW4STM32 from AC6
+• ARM® mbed Enabled™ online
+
+
+
+Demo code:
+ www.st.com/stm32f7-discovery 
+
+System Workbench IDE:
+http://www.openstm32.org/HomePage 
+System Workbench IDE Guide: 
+http://www.openstm32.org/System%2BWorkbench%2Bfor%2BSTM32
+OpenODC:
+http://openocd.org/doc/html/About.html 
+
+Arm Toolchain
+https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads
+
+Firmware
+http://www.st.com/content/st_com/en/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32cube-embedded-software/stm32cubef7.html
+
+Connecting Serial Console to the STM32F7 Discovery
+https://www.emcraft.com/stm32f7-discovery-board/connecting-serial-console-to-stm32f746disco
+
+emWin
+https://www.segger.com/products/user-interface/emwin/technology/samples/
+
+
+
+
+Eclispe for ARM M-7
+https://gnu-mcu-eclipse.github.io/articles/arm-com-2015-11/
+
+arduino
+https://www.arduino.cc/en/Main/Donate
+
+
+CPU ARCHITECTURE
+https://www.tutorialspoint.com/computer_logical_organization/cpu_architecture.htm
+Digital computer is in general made up of ALU, Program Counter (PC), Registers, Stack Pointer (SP) and stack. For central control it has timing control unit (TCU).
+
+
+ARM Assembly Language
+http://www.peter-cockerell.net/aalp/html/frames.html
+
+Debug with GDB and OpenOCD
+http://openocd.org/doc/html/GDB-and-OpenOCD.html
+
+TO READ:
+https://github.com/japaric/cortex-m-template
+
+
+Load Demo Hex
+To load the demonstration, use STM32 ST-Link Utility to program both internal Flash and external QSPI memory.
+To edit and debug the demonstration you need first to program the external QSPI memory using STLink utility
+and then use your preferred toolchain to update and debug the internal flash content.
+
+In order to program the demonstration you must do the following:
+1- Open STM32 ST-Link Utility V3.7, click on "External Loader" from the bar menu then check 
+   "N25Q128A_STM32F746G-DISCO" box 
+2- Connect the STM32746G-DISCOVERY board to PC with USB cable through CN14
+3- Use "STM32CubeDemo_STM32746G-DISCO_V1.1.0.hex" file provided under “Binary” with STM32 ST-Link Utility
+   to program both internal Flash and external QSPI memory
+4- copy the audio and video files provided under "Utilities/Media/" in the USB key
+5- Plug a USB micro A-Male to A-Female cable on CN12 connector
+-> The internal Flash and the external QSPI are now programmed and the demonstration is shown on the board.
+
+
+
+BIN VS ELF
+A Bin file is a pure binary file with no memory fix-ups or relocations, more than likely it has explicit instructions to be loaded at a specific memory address. Whereas....
+ELF files are Executable Linkable Format which consists of a symbol look-ups and relocatable table, that is, it can be loaded at any memory address by the kernel and automatically, all symbols used, are adjusted to the offset from that memory address where it was loaded into. Usually ELF files have a number of sections, such as 'data', 'text', 'bss', to name but a few...it is within those sections where the run-time can calculate where to adjust the symbol's memory references dynamically at run-time.
+http://blog.csdn.net/u010154760/article/details/44925613?locationNum=5&fps=1
+
+Makefile tutorial
+http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+
+
+
+Linux commands: 
+stat - find file info, more details than ls.
+
+
+Fix large Bin file:
+arm-none-eabi-objcopy.exe -O binary -S -R .Rx* -R .Tx* STM32746G_DISCOVERY.elf my2.bin

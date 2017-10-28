@@ -1,0 +1,16 @@
+Read main code of LwIP Raw project.
+Read CubeMX code geneartion pdf
+Learn HAL example.
+
+
+Gen code from CubeMX with LwIP and LCD support.
+Important notes of adding LCD:
+1. it depends on modules: SDRAM, DMA2D, UART,
+2. fixs lcd log. (systencall.c provides glibc func,such as printf(), and LCD_LOG_PUTCHAR in lcd_log.c redirect printf to lcd screen.)
+3. Init and setup ETH with dhcp,display eth status on screen.
+
+3. Add user button handler for displaying eth info.
+4. Create TCP/UDP echo application
+5. Performance test.
+
+

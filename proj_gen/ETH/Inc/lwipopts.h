@@ -143,7 +143,10 @@
 #define CHECKSUM_CHECK_ICMP6 0
 /*-----------------------------------------------------------------------------*/
 /* USER CODE BEGIN 1 */
-
+#define LWIP_DEBUG 1
+#define DHCP_DEBUG LWIP_DBG_OFF
+#define IGMP_DEBUG LWIP_DBG_OFF
+#define IP_DEBUG LWIP_DBG_OFF
 /* USER CODE END 1 */
 
 #ifdef __cplusplus

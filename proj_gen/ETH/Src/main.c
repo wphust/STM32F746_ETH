@@ -53,6 +53,7 @@
 
 /* USER CODE BEGIN Includes */
 #include "lcd_app.h"
+#include "../Utilities/Log/lcd_log.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -105,8 +106,9 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
-  LCD_APP_init();
+  LCD_init();
   MX_LWIP_Init();
+  //LCD_UsrLog("lwIP initialised. \n");
 
   /* USER CODE END 2 */
 

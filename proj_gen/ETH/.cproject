@@ -85,20 +85,20 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1826248617.30480678" name="/" resourcePath="Utilities">
-						<toolChain id="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug.1245008333" name="Ac6 STM32 MCU GCC" superClass="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug" unusedChildren="">
-							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.2108631430.1124952302" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix.2108631430"/>
-							<option id="fr.ac6.managedbuild.option.gnu.cross.mcu.1073467515.121404962" name="Mcu" superClass="fr.ac6.managedbuild.option.gnu.cross.mcu.1073467515"/>
-							<option id="fr.ac6.managedbuild.option.gnu.cross.board.1849892353.783258689" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board.1849892353"/>
-							<option id="fr.ac6.managedbuild.option.gnu.cross.instructionSet.1384305943.1417182264" name="Instruction Set" superClass="fr.ac6.managedbuild.option.gnu.cross.instructionSet.1384305943"/>
-							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.628950058.640532285" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu.628950058"/>
-							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.313786500.2061350805" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi.313786500"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.1337187529" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.1663102306"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.22397543" name="MCU G++ Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.1012820086"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.2124874807" name="MCU GCC Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker.1285188659"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.1403868582" name="MCU G++ Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.878386247"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.archiver.1257049150" name="MCU GCC Archiver" superClass="fr.ac6.managedbuild.tool.gnu.archiver.1065841747"/>
-							<tool id="fr.ac6.managedbuild.tool.gnu.cross.assembler.9659750" name="MCU GCC Assembler" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.1513249681"/>
+					<folderInfo id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1826248617.1936334572" name="/" resourcePath="Utilities/Log">
+						<toolChain id="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug.715200920" name="Ac6 STM32 MCU GCC" superClass="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug" unusedChildren="">
+							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.2108631430.1494172747" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix.2108631430"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.mcu.1073467515.1397877283" name="Mcu" superClass="fr.ac6.managedbuild.option.gnu.cross.mcu.1073467515"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.board.1849892353.290820929" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board.1849892353"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.instructionSet.1384305943.1680114244" name="Instruction Set" superClass="fr.ac6.managedbuild.option.gnu.cross.instructionSet.1384305943"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.628950058.201143377" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu.628950058"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.313786500.1634021300" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi.313786500"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.1830507652" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.1663102306"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.931804998" name="MCU G++ Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.1012820086"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.1906818379" name="MCU GCC Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker.1285188659"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.1130739537" name="MCU G++ Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.878386247"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.archiver.374246787" name="MCU GCC Archiver" superClass="fr.ac6.managedbuild.tool.gnu.archiver.1065841747"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.assembler.187121372" name="MCU GCC Assembler" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.1513249681"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -106,6 +106,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Utilities/Log"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>

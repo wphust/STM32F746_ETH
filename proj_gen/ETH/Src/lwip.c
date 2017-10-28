@@ -144,7 +144,12 @@ void MX_LWIP_Init(void)
 void MX_LWIP_Process(void)
 {
 /* USER CODE BEGIN 4_1 */
+  /* Poll eth interface status*/
+  ethernetif_set_link(&gnetif);
+
 /* USER CODE END 4_1 */
+
+  /*Read frame from eth interface*/
   ethernetif_input(&gnetif);
   
 /* USER CODE BEGIN 4_2 */
@@ -153,6 +158,7 @@ void MX_LWIP_Process(void)
   sys_check_timeouts();
 
 /* USER CODE BEGIN 4_3 */
+
 /* USER CODE END 4_3 */
 }
 

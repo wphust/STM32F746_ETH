@@ -8,15 +8,15 @@
 
 #include "stm32746g_discovery.h"
 #include "stm32746g_discovery_lcd.h"
+#include "../Utilities/Log/lcd_log.h"
 
-#include "../Utilities/Log/lcd_log.c"
 
 /**
   * @brief  Setup the BSP.
   * @param  None
   * @retval None
   */
-void LCD_APP_init(void)
+void LCD_init(void)
 {
 
   /* Configure LED1, LED2, LED3 and LED4 */
@@ -48,9 +48,9 @@ void LCD_APP_init(void)
   LCD_LOG_Init();
 
   /* Show Header and Footer texts */
-  LCD_LOG_SetHeader((uint8_t *)"TCP Test");
-  LCD_LOG_SetFooter((uint8_t *)"STM32756G-EVAL board");
+  LCD_LOG_SetHeader((uint8_t *)"TCP TEST");
+  LCD_LOG_SetFooter((uint8_t *)"STM32756G-board");
 
-  LCD_UsrLog ("  State: Ethernet Initialization ...\n");
+  LCD_UsrLog ("LCD initialised \n");
 
 }

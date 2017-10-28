@@ -8,7 +8,7 @@
 #ifndef LCD_APP_H_
 #define LCD_APP_H_
 
-void LCD_APP_init(void);
+void LCD_init(void);
 
 
 #endif /* LCD_APP_H_ */

@@ -52,7 +52,7 @@
 #include "lwip.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "lcd_app.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -105,6 +105,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
+  LCD_APP_init();
   MX_LWIP_Init();
 
   /* USER CODE END 2 */

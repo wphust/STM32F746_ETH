@@ -829,6 +829,30 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/**
+* @brief EXTI line detection callbacks
+* @param  GPIO_Pin: Specifies the pins connected EXTI line
+* @retval None
+*/
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	LCD_UsrLog("Pin:%d",GPIO_Pin);
+
+//	if (GPIO_Pin == MFX_IRQOUT_PIN)
+//	{
+//	 /* Get the IT status register value */
+//	 if(BSP_IO_ITGetStatus(MII_INT_PIN))
+//	 {
+//	   ethernetif_set_link(&gnetif);
+//	 }
+//	 BSP_IO_ITClear();
+//	}
+//	else if (GPIO_Pin == GPIO_PIN_13)
+//	{
+//	  /*connect to tcp server */
+//	  tcp_echoclient_connect();
+//	}
+}
 
 /* USER CODE END 4 */
 

@@ -13,4 +13,14 @@ Important notes of adding LCD:
 4. Create TCP/UDP echo application
 5. Performance test.
 
+6. use nc command to test socket.
+e.g.
+On one machine, run:
+$ nc -v -l 2222 > /dev/null
+On a second machine, run:
+$ dd if=/dev/zero bs=1024K count=512 | nc -v $IP_OF_FIRST_MACHINE 2222
+dd will give you your speed:
+536870912 bytes (537 MB) copied, 4.87526 s, 117 MB/s
+
+
 

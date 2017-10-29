@@ -64,6 +64,8 @@
 #ifdef USE_LCD
 #include "../Utilities/Log/lcd_log.h"
 #endif
+#include "tcp_echoclient.h"
+#include "tcp_echoserver.h"
 
 /* USER CODE END 0 */
 /* Private function prototypes -----------------------------------------------*/
@@ -292,6 +294,15 @@ void DHCP_Periodic_Handle(struct netif *netif)
 }
 #endif
 
+void ethif_status_notify(struct netif *netif)
+{
+	if(netif_is_link_up(netif))
+	{
+		//tcp_echoclient_connect();
+		tcp_echoserver_init();
+	}
+}
+
 /* USER CODE END 2 */
 
 /**
@@ -337,7 +348,7 @@ void MX_LWIP_Init(void)
   User_notification(&gnetif);
 
 
-  //netif_set_status_callback(&gnetif,???);
+  netif_set_status_callback(&gnetif,ethif_status_notify);
 /* USER CODE END 3 */
 }
 
@@ -362,7 +373,8 @@ void MX_LWIP_Init(void)
 void MX_LWIP_Process(void)
 {
 /* USER CODE BEGIN 4_1 */
-  /* Poll eth interface status*/
+  /* Poll eth interface status
+   * TODO replace this with ISR, need to find ISR for eth pin*/
   ethernetif_set_link(&gnetif);
 
 /* USER CODE END 4_1 */
